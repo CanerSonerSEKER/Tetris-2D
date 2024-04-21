@@ -225,6 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 542910780}
   - component: {fileID: 542910779}
+  - component: {fileID: 542910781}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -260,6 +261,21 @@ Transform:
   - {fileID: 1275367413}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &542910781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542910778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbeb96f5e1c8cd3429bf689148a7f8de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 54ecc49ac0bfb0e45ac43a3903852572, type: 2}
+  mainBoard: {fileID: 1397006016}
+  trackingPiece: {fileID: 1397006017}
 --- !u!1 &687650304
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +342,7 @@ SpriteRenderer:
   m_Size: {x: 10.681813, y: 20.677084}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &687650306
@@ -410,7 +426,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &757010582
@@ -607,31 +623,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af184639424eae048b83b115a42ee7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <_tilemap>k__BackingField: {fileID: 0}
-  <activePiece>k__BackingField: {fileID: 0}
   _tetrominoes:
   - _tetromino: 0
     _tile: {fileID: 11400000, guid: 86d74e169a3d54442bcd1c63d9e11b24, type: 2}
-    <cells>k__BackingField: []
   - _tetromino: 1
     _tile: {fileID: 11400000, guid: 618dad308469aac4990db9f411236404, type: 2}
-    <cells>k__BackingField: []
   - _tetromino: 2
     _tile: {fileID: 11400000, guid: 466cf77428b07174098f33f2d0619819, type: 2}
-    <cells>k__BackingField: []
   - _tetromino: 3
     _tile: {fileID: 11400000, guid: 6273a159509ed5547aab0186174cf311, type: 2}
-    <cells>k__BackingField: []
   - _tetromino: 4
     _tile: {fileID: 11400000, guid: 844e182583bfdac4c9153fa617a5f7fe, type: 2}
-    <cells>k__BackingField: []
   - _tetromino: 5
     _tile: {fileID: 11400000, guid: 5d54d510e2fea4048b99124a144c9f9b, type: 2}
-    <cells>k__BackingField: []
   - _tetromino: 6
     _tile: {fileID: 11400000, guid: 867269f424c261f468d3b085bf425928, type: 2}
-    <cells>k__BackingField: []
   spawnPosition: {x: -1, y: 8, z: 0}
+  boardSize: {x: 10, y: 20}
 --- !u!114 &1397006017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,13 +652,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d365eec31bff2849ad73196b4858c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <board>k__BackingField: {fileID: 0}
-  <data>k__BackingField:
-    _tetromino: 0
-    _tile: {fileID: 0}
-    <cells>k__BackingField: []
-  <cells>k__BackingField: []
-  <position>k__BackingField: {x: 0, y: 0, z: 0}
+  stepDelay: 0.8
+  lockDelay: 0.5
 --- !u!1 &1938866838
 GameObject:
   m_ObjectHideFlags: 0
